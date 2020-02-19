@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="../js/login.js"></script>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <img src="../images/telefone.jpg">
+    <button type="button" name="notifyButton" onclick="notifyLogin()">Notification!</button>
+    <form class="form-inline" name="ipverify" onsubmit="return onLoad()">
+        <div class="form-group mb-2">
+          <label for="inputPassword2" class="sr-only">Password</label>
+          <input type="text" class="form-control is-valid" id="AccountId" placeholder="ip" name="account">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Verifique IP</button>
+    </form>
+    <a class class="btn btn-primary" href="initial_page.html" name="atalho">Atalho</a>
+  </body>
+</html>
