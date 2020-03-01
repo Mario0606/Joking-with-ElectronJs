@@ -12,28 +12,33 @@
       <img src="../images/telefone.jpg">
       <form>
         <div class="form-row">
-          <div class="col-md-4 mb-3">
+          <div class="form-group col-md-4 mb-3">
             <label for="IP">Machine IP:</label>
             <input type="text" class="form-control" id="MachineID" required onfocusout="ValidMachine()">
             <div class="valid-feedback">
               Máquina Válida
             </div>
             <div class="invalid-feedback">
-              Máquina não encontrada.
+              Máquina não encontrada
             </div>
           </div>
+        </div>
         <div class="form-row">
-          <div class="col-md-4 mb-3">
+          <div class="form-group col-md-4 mb-3">
             <label for="Ramal">Ramal:</label>
             <input type="text" class="form-control" id="Ramal" required disabled>
           </div>
+        </div>
         <div class="form-row">
-          <div class="col-md-4 mb-3">
+          <div class="form-group col-md-4 mb-3">
             <label for="Senha">Senha:</label>
             <input type="password" class="form-control" id="Password" required disabled>
           </div>
+        </div>
         <button class="btn btn-primary btn-sm" type="submit">Submit form</button>
       </form>
     </div>
+    <!-- JS -->
+    <script src="../js/login.js"></script>
   </body>
 </html>
