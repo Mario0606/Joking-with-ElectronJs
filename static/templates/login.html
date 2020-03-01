@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="../js/login.js"></script>
     <title>Hello World!</title>
   </head>
   <body>
-    <img src="../images/telefone.jpg">
-    <button type="button" name="notifyButton" onclick="notifyLogin()">Notification!</button>
-    <form class="form-inline" name="ipverify" onsubmit="return onLoad()">
-        <div class="form-group mb-2">
-          <label for="inputPassword2" class="sr-only">Password</label>
-          <input type="text" class="form-control is-valid" id="AccountId" placeholder="ip" name="account">
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Verifique IP</button>
-    </form>
-    <a class class="btn btn-primary" href="initial_page.html" name="atalho">Atalho</a>
+    <div class='container'>
+      <img src="../images/telefone.jpg">
+      <form>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="IP">Machine IP:</label>
+            <input type="text" class="form-control" id="MachineID" required onfocusout="ValidMachine()">
+            <div class="valid-feedback">
+              Máquina Válida
+            </div>
+            <div class="invalid-feedback">
+              Máquina não encontrada.
+            </div>
+          </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="Ramal">Ramal:</label>
+            <input type="text" class="form-control" id="Ramal" required disabled>
+          </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="Senha">Senha:</label>
+            <input type="password" class="form-control" id="Password" required disabled>
+          </div>
+        <button class="btn btn-primary btn-sm" type="submit">Submit form</button>
+      </form>
+    </div>
   </body>
 </html>

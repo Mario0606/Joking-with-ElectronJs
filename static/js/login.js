@@ -19,3 +19,16 @@ function onLoad(){
         document.getElementById(y).class="form-control is-valid"
     }
 }
+
+function ValidMachine(){
+    var MachineID = document.getElementById('MachineID')
+    if(MachineID.value == 'Mario'){
+        MachineID.className = "form-control is-valid"
+        document.getElementById('Ramal').disabled = false
+        document.getElementById('Password').disabled = false
+        console.log(MachineID.value)
+    }
+    else {
+        MachineID.className = "form-control is-invalid"
+    }
+}   
