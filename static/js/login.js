@@ -7,28 +7,21 @@ function notifyLogin(){
     });
 }
 
-function onLoad(){
-    var x = document.forms["ipverify"]["account"].value;
-    var y = document.forms["ipverify"]["account"].id;
-    if (x == "") {
-        document.getElementById(y).oninvalid="ip inválido"
-        console.log('blabla')
-        return false;
+function validRamal(){
+    let account = document.getElementById('Ramal').value
+    let password = document.getElementById('Password').value
+    let register = {
+        'action': 'register',
+        'account': account,
+        'password': password
     }
-    else {
-        document.getElementById(y).class="form-control is-valid"
+    register = JSON.stringify(register)
+    socket.send(register)
+    try{
+        window.location.href = `file://${__dirname}/static/templates/login.html`;
     }
+    catch (e){
+        console.log(e)
+    }
+    console.log(registered)
 }
-
-function ValidMachine(){
-    var MachineID = document.getElementById('MachineID')
-    if(MachineID.value == 'Mario'){
-        MachineID.className = "form-control is-valid"
-        document.getElementById('Ramal').disabled = false
-        document.getElementById('Password').disabled = false
-        console.log(MachineID.value)
-    }
-    else {
-        MachineID.className = "form-control is-invalid"
-    }
-}   

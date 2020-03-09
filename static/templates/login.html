@@ -14,7 +14,7 @@
         <div class="form-row">
           <div class="form-group col-md-4">
             <label for="IP">Machine IP:</label>
-            <input type="text" class="form-control" id="MachineID" required onfocusout="ValidMachine()">
+            <input type="text" class="form-control" id="MachineID" required onfocusout="websocketStart()">
             <div class="valid-feedback">
               Máquina Válida
             </div>
@@ -35,10 +35,11 @@
             <input type="password" class="form-control" id="Password" required disabled>
           </div>
         </div>
-        <button class="btn btn-primary btn-sm" type="submit">Submit form</button>
+        <button class="btn btn-primary btn-sm" type="submit" onclick="validRamal()">Submit form</button>
       </form>
     </div>
     <!-- JS -->
     <script src="../js/login.js"></script>
+    <script src="../js/websocket.js"></script>
   </body>
 </html>
