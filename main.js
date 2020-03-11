@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Notification} = require('electron')
+const { app, BrowserWindow } = require('electron')
 
 function createWindow () {
   // Cria uma janela de navegação.
@@ -31,8 +31,6 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
-
-
 
 app.on('activate', () => {
   // On macOS it's common to re-create a window in the app when the

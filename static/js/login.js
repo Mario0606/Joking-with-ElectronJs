@@ -7,20 +7,22 @@ function notifyLogin(){
     });
 }
 
-function validRamal(){
+function validRamal() {
     let account = document.getElementById('Ramal').value
     let password = document.getElementById('Password').value
-    let register = {
-        'action': 'register',
-        'account': account,
-        'password': password
+    let event = {
+        action: 'register',
+        account: account,
+        password: password
     }
-    register = JSON.stringify(register)
-    socket.send(register)
+
+    event = JSON.stringify(event)
+
+    socket.send(event)
+    
     try{
-        window.location.href = `file://${__dirname}/static/templates/login.html`;
-    }
-    catch (e){
+        window.location.href = `file://${__dirname}/static/templates/login.html`
+    } catch (e){
         console.log(e)
     }
     console.log(registered)
